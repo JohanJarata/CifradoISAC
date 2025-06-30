@@ -29,11 +29,11 @@ Este es un bot avanzado de **cifrado y descifrado para Discord**, basado en téc
 
 | Comando | Función |
 |--------|--------|
-| `|hola`, `|hi`, `|hello` | Saludo inicial |
-| `|start`, `|menu`, `|help` | Mostrar menú principal |
-| `|cifrar`, `|encrypt`, `|c` | Iniciar proceso de cifrado |
-| `|descifrar`, `|decrypt`, `|d` | Iniciar proceso de descifrado |
-| `|info` | Información del bot |
+| `!hola`, `!hi`, `!hello` | Saludo inicial |
+| `!start`, `!menu`, `!help` | Mostrar menú principal |
+| `!cifrar`, `!encrypt`, `!c` | Iniciar proceso de cifrado |
+| `!descifrar`, `!decrypt`, `!d` | Iniciar proceso de descifrado |
+| `!info` | Información del bot |
 | `cancelar` | Detener proceso actual |
 
 ---
