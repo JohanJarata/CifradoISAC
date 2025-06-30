@@ -55,11 +55,29 @@ git clone https://github.com/tu-usuario/nombre-del-repo.git
 cd nombre-del-repo
 ```
 
-### 2. Instala dependencias
+### 2. Instala Node.js y las dependencias necesarias
+
+#### 🔽 Si aún **NO tienes Node.js ni npm instalados**:
+
+1. Ve al sitio oficial: [https://nodejs.org](https://nodejs.org)
+2. Descarga e instala la **versión recomendada para producción (LTS)**.
+3. Verifica la instalación abriendo una terminal o consola y escribiendo:
+
+```bash
+node -v
+npm -v
+```
+
+> Deberías ver las versiones de Node.js y npm. Por ejemplo:
+> `v18.17.1` y `9.6.7`
+
+#### 📦 Luego, instala las dependencias del proyecto:
+
 ```bash
 npm install discord.js
 ```
-> `crypto` ya está incluido con Node.js, no necesitas instalarlo.
+
+> Nota: **No necesitas instalar `crypto`**, ya que es parte del núcleo de Node.js (viene incluido).
 
 ### 3. Crea el archivo `config.json`
 ```json
@@ -82,14 +100,43 @@ npm install discord.js
 ---
 
 ### 4. Crea tu bot en el [Discord Developer Portal](https://discord.com/developers/applications)
-1. Crea una nueva aplicación.
-2. En la pestaña **Bot**, añade un bot y copia el token.
-3. En la pestaña **OAuth2**, selecciona los permisos:
-   - `Guilds`
-   - `Guild Messages`
-   - `Message Content`
-   - `Direct Messages`
-4. Usa el enlace generado para invitar al bot a tu servidor.
+
+#### 🧱 Paso a paso detallado:
+
+1. Entra a [Discord Developer Portal](https://discord.com/developers/applications) con tu cuenta de Discord.
+2. Haz clic en **"New Application"** y coloca un nombre (ej. `BotCifradoADN`). Luego presiona "Create".
+3. En el menú lateral izquierdo, ve a la sección **"Bot"**.
+4. Haz clic en **"Add Bot"** y confirma con "Yes, do it!".
+5. Opcionalmente, personaliza:
+   - **Nombre del bot**
+   - **Imagen de perfil (avatar)**
+
+#### 🔐 Copia el Token del Bot
+1. En la sección "Bot", haz clic en **"Reset Token"** (si es nuevo) y luego en **"Copy"**.
+2. Guarda este token en tu archivo `config.json` en el campo `"token"`.
+
+#### ⚙️ Habilita las Intents necesarias
+Asegúrate de activar estas opciones en la sección **Privileged Gateway Intents**:
+- ✅ PRESENCE INTENT *(opcional)*
+- ✅ SERVER MEMBERS INTENT *(opcional)*
+- ✅ MESSAGE CONTENT INTENT *(requerido para leer el contenido de los mensajes)*
+
+#### 🔗 Configura los permisos e invita el bot
+1. Ve a la sección **OAuth2 → URL Generator**.
+2. Marca los siguientes scopes:
+   - ✅ `bot`
+3. En la sección **Bot Permissions**, selecciona:
+   - ✅ `Send Messages`
+   - ✅ `Read Message History`
+   - ✅ `View Channels`
+   - ✅ `Send Messages in Threads`
+   - ✅ `Use Slash Commands`
+   - ✅ `Read Messages/View Channels`
+   - ✅ `Use Application Commands`
+4. Copia la URL generada en la parte inferior y pégala en tu navegador.
+5. Selecciona el servidor donde deseas agregar el bot y haz clic en **Autorizar**.
+
+✅ ¡Tu bot ya estará dentro del servidor de Discord y listo para recibir comandos!
 
 ---
 
